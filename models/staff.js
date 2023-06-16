@@ -34,7 +34,13 @@ const getOne = (id) => {
   return staff.find(staff => staff.id === id);
 };
 
+const create = (newStaff) => {
+  newStaff.id = Date.now() % 1000000;
+  staff.push(newStaff);
+};
+
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
 };

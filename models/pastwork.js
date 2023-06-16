@@ -39,7 +39,7 @@ const getOne = (id) => {
 };
 
 const create = (newPastwork) => {
-  newPastwork.id = Date.now() % 100000;
+  newPastwork.id = Date.now() % 1000000;
   pastwork.push(newPastwork);
 };
 

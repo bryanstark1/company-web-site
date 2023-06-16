@@ -14,8 +14,21 @@ const show = (req, res) => {
   });
 };
 
+const newStaff = (req, res) => {
+  res.render('staff/new', {
+    title: "New Staff Member"
+  });
+};
+
+const create = (req, res) => {
+  Staff.create(req.body);
+  res.redirect('staff');
+};
+
 
 module.exports = {
   index,
-  show
+  show,
+  new: newStaff,
+  create
 };
