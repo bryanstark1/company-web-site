@@ -1,8 +1,76 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
-  color: #00B7FF;
+  color: darkred;
+}
+
+nav {
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
+  background-color: grey;
+  min-width: 100%;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem;
+}
+
+ul > li > a {
+  text-decoration: none;
+}
+
+ul > li > a:hover {
+  color: gold;
+}
+
+.company-logo {
+  height: 100px;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+form > li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.delete-button {
+  margin: 0;
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.staff-list li {
+  display: flex;
+  gap: 1rem;
+}
+
+.office-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }

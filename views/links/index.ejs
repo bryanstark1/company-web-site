@@ -1,10 +1,10 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
-
-<ul>
+<h1><%= title %></h1>
+<ul class="office-links">
   <% link.forEach((l) => { %>
     <li>
-      <a href="<%= l.link %>"><%= l.location %></a>
+      <a href="<%= l.link %>"><%= l.location %> offices</a>
     </li>
   <% }) %>
 </ul>  

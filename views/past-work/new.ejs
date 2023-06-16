@@ -1,11 +1,11 @@
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
-
+<h1><%= title %></h1>
 <form action="/past-work" method="POST">
-  <input type="text" name="suit">
-  <input type="text" name="location">
-  <input type="text" name="feature">
-  <input type="text" name="image">
+  <input type="text" name="suit" placeholder="Suit Model">
+  <input type="text" name="location" placeholder="Location First Seen">
+  <input type="text" name="feature" placeholder="Special Feature">
+  <input type="text" name="image" placeholder="Image URL">
   <button type="submit">Submit</button>
 </form>
 
