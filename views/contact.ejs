@@ -1,6 +1,13 @@
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
 
-  <p>Welcome to <%= title %></p>
+  <form action="/contact" method="POST">
+    <input type="text" name="first-name">
+    <input type="text" name="last-name">
+    <input type="text" name="phone">
+    <input type="text" name="email">
+    <textarea name="message" cols="30" rows="10"></textarea>
+    <button type="submit">Submit</button>
+  </form>
 
 <%- include('./partials/footer') %>

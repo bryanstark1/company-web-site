@@ -1,9 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const contactCtrl = require('../controllers/contact');
 
-/* GET contact page. */
-router.get('/', function(req, res, next) {
-  res.render('contact', { title: 'Contact' });
-});
+
+// All actual paths start with '/contact'
+
+// GET /contact
+router.get('/', contactCtrl.index);
+// GET /contact
+router.get('/', contactCtrl.new);
+// POST /contact
+router.post('/', contactCtrl.create);
+
 
 module.exports = router;
