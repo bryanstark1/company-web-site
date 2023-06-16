@@ -38,7 +38,13 @@ const getOne = (id) => {
   return pastwork.find(pastwork => pastwork.id === id);
 };
 
+const create = (newPastwork) => {
+  newPastwork.id = Date.now() % 100000;
+  pastwork.push(newPastwork);
+};
+
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
 };

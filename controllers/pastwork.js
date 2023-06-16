@@ -14,7 +14,21 @@ const show = (req, res) => {
   });
 };
 
+const newPastwork = (req, res) => {
+  res.render('past-work/new', {
+    title: 'New Past Work'
+  });
+};
+
+const create = (req, res) => {
+  Pastwork.create(req.body);
+  res.redirect('/past-work');
+};
+
+
 module.exports = {
   index,
-  show
+  show,
+  new: newPastwork,
+  create
 };

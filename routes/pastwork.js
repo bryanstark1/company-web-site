@@ -7,7 +7,11 @@ const pastworkCtrl = require('../controllers/pastwork');
 
 // GET /past-work
 router.get('/', pastworkCtrl.index);
+// GET /past-work/new
+router.get('/new', pastworkCtrl.new);
 // GET /past-work/:id
 router.get('/:id', pastworkCtrl.show);
+// POST /past-work/
+router.post('/', pastworkCtrl.create);
 
 module.exports = router;
