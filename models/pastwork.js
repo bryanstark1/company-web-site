@@ -43,8 +43,15 @@ const create = (newPastwork) => {
   pastwork.push(newPastwork);
 };
 
+const update = (id, updatedPastwork) => {
+  id = parseInt(id);
+  const work = pastwork.find(work => work.id === id);
+  Object.assign(work, updatedPastwork);
+};
+
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  update
 };

@@ -25,10 +25,25 @@ const create = (req, res) => {
   res.redirect('/past-work');
 };
 
+const edit = (req, res) => {
+  const pastwork = Pastwork.getOne(req.params.id);
+  res.render('past-work/edit', {
+    title: "Edit Past Work",
+    pastwork
+  });
+};
+
+const update = (req, res) => {
+  Pastwork.update(req.params.id, req.body);
+  res.redirect(`/past-work/${req.params.id}`);
+};
+
 
 module.exports = {
   index,
   show,
   new: newPastwork,
-  create
+  create,
+  edit,
+  update
 };

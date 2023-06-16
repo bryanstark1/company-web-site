@@ -40,7 +40,7 @@ const edit = (req, res) => {
 
 const update = (req, res) => {
   Staff.update(req.params.id, req.body);
-  res.redirect('/staff');
+  res.redirect(`/staff/${req.params.id}`);
 }
 
 

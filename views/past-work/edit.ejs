@@ -1,0 +1,13 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<form action="/past-work/<%= pastwork.id %>?_method=PUT" method="POST">
+  <input type="text" name="suit" value="<%= pastwork.suit %>">
+  <input type="text" name="location" value="<%= pastwork.location %>">
+  <input type="text" name="feature" value="<%= pastwork.feature %>">
+  <input type="text" name="image" value="<%= pastwork.image %>">
+  <button type="submit">Update</button>
+</form>
+
+
+<%- include('../partials/footer') %>
