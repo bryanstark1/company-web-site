@@ -1,0 +1,12 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<ul>
+  <% pastwork.forEach((p) => { %>
+    <li>
+      <a href="/past-work/<%= p.id %>"><%= p.suit %></a>
+    </li>
+  <% }) %>
+</ul>  
+
+<%- include('../partials/footer') %>
