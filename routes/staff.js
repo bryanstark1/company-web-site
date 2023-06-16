@@ -7,5 +7,7 @@ const staffCtrl = require('../controllers/staff');
 
 // GET /staff
 router.get('/', staffCtrl.index);
+// GET /staff/:id
+router.get('/:id', staffCtrl.show);
 
 module.exports = router;

@@ -29,6 +29,12 @@ const getAll = () => {
   return staff;
 };
 
+const getOne = (id) => {
+  id = parseInt(id);
+  return staff.find(staff => staff.id === id);
+};
+
 module.exports = {
-  getAll
+  getAll,
+  getOne
 };

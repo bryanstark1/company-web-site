@@ -7,6 +7,15 @@ const index = (req, res) => {
   });
 };
 
+const show = (req, res) => {
+  res.render('staff/show', {
+    staff: Staff.getOne(req.params.id),
+    title: 'Staff Details'
+  });
+};
+
+
 module.exports = {
-  index
+  index,
+  show
 };
