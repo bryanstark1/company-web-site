@@ -39,8 +39,22 @@ const create = (newStaff) => {
   staff.push(newStaff);
 };
 
+const deleteOne = (id) => {
+  id = parseInt(id);
+  const idx = staff.findIndex(staff => staff.id === id);
+  staff.splice(idx, 1);
+}
+
+const update = (id, updatedStaff) => {
+  id = parseInt(id);
+  const member = staff.find(member => member.id === id);
+  Object.assign(member, updatedStaff);
+}
+
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne,
+  update
 };

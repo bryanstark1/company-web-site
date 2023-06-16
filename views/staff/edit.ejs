@@ -1,0 +1,12 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<form action="/staff/<%= staff.id %>?_method=PUT" method="POST">
+  <input type="text" name="name" value="<%= staff.name %>">
+  <input type="text" name="position" value="<%= staff.position %>">
+  <input type="text" name="image" value="<%= staff.image %>">
+  <button type="submit">Update</button>
+</form>
+
+
+<%- include('../partials/footer') %>

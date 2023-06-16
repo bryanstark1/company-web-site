@@ -4,6 +4,9 @@
 <ul>
   <% staff.forEach((s) => { %>
     <li>
+      <form action="/staff/<%= s.id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+      </form>
       <a href="/staff/<%= s.id %>"><%= s.name %></a>
     </li>
   <% }) %>

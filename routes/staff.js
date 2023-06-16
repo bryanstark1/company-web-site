@@ -11,7 +11,13 @@ router.get('/', staffCtrl.index);
 router.get('/new', staffCtrl.new);
 // GET /staff/:id
 router.get('/:id', staffCtrl.show);
+// GET /staff/:id/edit
+router.get('/:id/edit', staffCtrl.edit);
 // POST /staff
 router.post('/', staffCtrl.create);
+// DELETE /staff/:id
+router.delete('/:id', staffCtrl.delete);
+// PUT /staff/:id
+router.put('/:id', staffCtrl.update);
 
 module.exports = router;
